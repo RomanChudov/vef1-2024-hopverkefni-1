@@ -62,8 +62,8 @@ html {
   --color-purple: #eebbdd;
   --color-purple-dark: #cc99bb;
   /** Litir með notkun **/
-  --color-background-primary: var(--color-yellow);
-  --color-background-secondary: var(--color-purple);
+  --color-background-primary: var(--color-white);
+  --color-background-secondary: var(--color-black);
   --color-background-form: var(--color-white);
   --color-border-with-background: var(--color-purple-dark);
   /* Letur stillingar */
@@ -94,7 +94,7 @@ html {
 @font-face {
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-display: swap;
   src: url("./fonts/Poppins-Regular.ttf") format("woff2");
 }
@@ -118,6 +118,21 @@ legend {
 /** Litur á hlekkjum erfist frá foreldri **/
 a {
   color: inherit;
+  text-decoration: none;
+}
+
+.month {
+  color: #9b9b9b;
+  size: 14px;
+}
+
+.readmore {
+  color: #e3cdb1;
+  size: 16px;
+}
+
+.website {
+  color: #d0d0d0;
 }
 
 /* Wrapper */
@@ -135,11 +150,6 @@ a {
   background-color: var(--color-background-primary);
 }
 
-@media (min-width: 800px) {
-  .wrapper {
-    gap: var(--vertical-space-large);
-  }
-}
 .wrapper .wrapper-content {
   width: var(--width-offset);
   max-width: var(--max-width);
@@ -149,78 +159,52 @@ a {
   margin-bottom: var(--spacing);
 }
 
-@media (min-width: 800px) {
-  .wrapper .wrapper-content {
-    display: grid;
-    grid-template-columns: repeat(var(--columns), 1fr);
-    gap: var(--gutter);
-  }
-  .wrapper .wrapper-nav {
-    grid-column: span 2;
-  }
-  .wrapper .wrapper-main {
-    grid-column: span 10;
-  }
+/** Valmynd **/
+nav {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
 }
 
+nav ul {
+  list-style: none;
+  text-align: center;
+}
 
+nav ul li {
+  display: inline-block;
+  margin-right: 1rem;
+}
 
+.topLine {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/** Meginmál og efni forsíðu **/
 main {
-  display: grid;
+  width: 100%;
 }
 
+/**
+ * notum þetta til að fá bil á milli eininga _almennt_
+ * en ekki að hver eining þurfi að huga að bili
+ */
+main > .content {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2);
+}
+
+/** Cards **/
 .cards {
   display: grid;
   grid-template-rows: auto;
   gap: var(--vertical-space);
   justify-items: center;
   width: 100%;
-}
-
-@media (width >= 700px) {
-  .cards {
-    grid-template-columns: repeat(calc(var(--columns) - 2), 1fr);
-    grid-template-rows: auto;
-  }
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-@media (width >= 700px) {
-  .card {
-    grid-column: span 4;
-  }
-}
-
-.cards > .title {
-  width: 100%;
-  text-align: center;
 }
 
 .cards > .content {
@@ -231,26 +215,30 @@ main {
   width: 100%;
 }
 
-@media (width >= 700px) {
+@media (min-width: 700px) {
   .cards > .content {
-    grid-template-columns: repeat(calc(var(--columns) - 2), 1fr);
+    grid-template-columns: repeat(calc(var(--columns)), 1fr);
     grid-template-rows: auto;
   }
 }
-
 /** Card **/
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
-/* .card {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+@media (min-width: 700px) {
+  .card {
+    grid-column: span 6;
   }
-  
-  @media (width >= 700px) {
-    .card {
-      grid-column: span 5;
-    }
-  } */
+}
+
+@media (min-width: 1200px) {
+  .card {
+    grid-column: span 4;
+  }
+}
 
 .card > .image {
   width: 100%;
@@ -258,8 +246,6 @@ main {
 
 .card > .image img {
   display: block;
-  border-top-left-radius: var(--border-radius-regular);
-  border-top-right-radius: var(--border-radius-regular);
   width: 100%;
   height: 300px;
   object-fit: cover;
@@ -269,11 +255,49 @@ main {
 .card > .content {
   flex: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: var(--spacing);
-  padding: calc(var(--spacing) / 2);
+}
+.card > .content h3 .readmore {
+  width: 50%;
+}
+.card > .content .month {
+  width: 100%;
+}
+
+.button {
+  display: inline-block;
+  padding: calc(var(--spacing) * 0.5) calc(var(--spacing) * 0.5);
   border: var(--border-regular);
-  border-top: 0;
-  border-bottom-left-radius: var(--border-radius-regular);
-  border-bottom-right-radius: var(--border-radius-regular);
+  border-width: var(--border-width);
+  color: var(--color-black);
+  background-color: var(--color-background-primary);
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color var(--transition-time-short)
+      var(--transition-timing-function),
+    color var(--transition-time-short) var(--transition-timing-function),
+    border-color var(--transition-time-short) var(--transition-timing-function);
+}
+
+.button:active {
+  color: var(--color-background-secondary);
+  background-color: var(--color-black);
+  border-color: var(--color-background-secondary);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+footer > p {
+  display: flex;
+  justify-content: center;
+}
+.samf {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
