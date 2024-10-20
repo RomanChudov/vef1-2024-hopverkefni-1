@@ -272,17 +272,35 @@
               </section>
             </div>
           </div>
-
-          <section class="blackbox">
-            <p>Craving more?</p>
-            <h3>Subscribe to our newsletter</h3>
-            <p>Email</p>
-            <h3>email@example.com</h3>
-            <h3>Enter your mail here</h3>
-            <p>Subscribe now</p>
-          </section>
         </main>
       </div>
+      <form method="GET" action=".">
+          <section>
+            <p class="craving">Craving more?</p>
+            <h3 class="subscribe">Subscribe to our newsletter</h3>
+          </section>
+          <section>
+            <fieldset>
+              <div>
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="Enter your mail here        "
+                />
+              </div>
+              <h3>email@example.com</h3>
+              <h3>Enter your mail here</h3>
+            </fieldset>
+          </section>   
+          <div class="actions">
+            <button class="blackbox-button">Subscribe now</button>
+          </div>
+
+          <p>Subscribe now</p>
+      </form>
       <footer>
         <p>Come and join us for more recipes</p>
         <div class="samf">
