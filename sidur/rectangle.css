@@ -1,0 +1,11 @@
+#rectangle {
+  width: 323.81px;           
+  height: 14.55px;           
+  top: 1004.87px;            
+  left: 595.65px;            
+  background: #FAFAFA;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 10px;             
+  border: 1px solid #ddd;   
+  position: absolute;         
+}
