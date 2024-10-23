@@ -274,15 +274,18 @@
           </div>
         </main>
       </div>
-      
+
       <form method="GET" action=".">
-          <section>
-            <p class="craving">Craving more?</p>
-            <h3 class="subscribe">Subscribe to our newsletter</h3>
-          </section>
-          <section>
-            <fieldset>
-              <div>
+        <div class="cardsFlex">
+          <div class="content">
+            <fieldset class="cardFlex">
+              <div class="content">
+                <p class="craving">Craving more?</p>
+                <h3 class="subscribe">Subscribe to our newsletter</h3>
+              </div>
+            </fieldset>
+            <fieldset class="cardFlex">
+              <div class="content">
                 <label for="email">Email</label>
                 <input
                   id="email"
@@ -292,16 +295,16 @@
                   placeholder="Enter your mail here        "
                 />
               </div>
-              <h3>email@example.com</h3>
-              <h3>Enter your mail here</h3>
             </fieldset>
-          </section>   
-          <div class="actions">
-            <button class="blackbox-button">Subscribe now</button>
+            <fieldset class="cardFlex">
+              <div class="content">
+                <button class="blackbox-button">Subscribe now</button>
+              </div>
+            </fieldset>
           </div>
-
-          <p>Subscribe now</p>
+        </div>
       </form>
+
       <footer>
         <p>Come and join us for more recipes</p>
         <div class="samf">
@@ -323,7 +326,6 @@
         </div>
         <p class="website">yamyam.com</p>
       </footer>
-
     </div>
   </body>
 </html>
