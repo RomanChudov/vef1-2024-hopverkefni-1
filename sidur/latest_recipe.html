@@ -2,142 +2,328 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <title>YamYam</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😈</text></svg>"
+    />
     <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="../grid.css" />
-    <title>Document</title>
+    <meta name="description" content="Nýjustu uppskriftir" />
+    <meta property="og:title" content="YamYam" />
+    <meta property="og:description" content="Nýjustu uppskriftir" />
+    <meta property="og:image" content="./myndir/Image-1" />
   </head>
   <body>
-    <header>
-      <h1>All recipes</h1>
-    </header>
-    <!-- nnn -->
-    <div>
-      <section>
-        <img src="../myndir/Image-1.png" />
-        <p>September</p>
-        <p>Pumpkin pie</p>
-      </section>
+    <div class="wrapper">
+      <p class="sr-only"><a href="#efni">Beint í efni</a></p>
 
-      <section>
-        <img src="../myndir/image 1.jpg" />
-        <p>September</p>
-        <p>Milk cookies</p>
-      </section>
+      <div class="wrapper-content">
+        <nav class="wrapper-nav">
+          <a href="../index.html"><img src="../myndir/Logotype.png" /></a>
+          <ul>
+            <section>
+              <li><a href="./latest_recipe.html">Recipes</a></li>
+              <li><a href="./video_recipe.html">Videos</a></li>
+              <li><a href="./about.html">About us</a></li>
+            </section>
+          </ul>
+        </nav>
+        <section class="topLine">
+          <header>
+            <h1>All recipes</h1>
+          </header>
+          <h3><a class="button"> </a> Only show video recipes</h3>
+        </section>
 
-      <section>
-        <img src="../myndir/Image-8.png" />
-        <p>September</p>
-        <p>Almond cookies</p>
-      </section>
+        <main id="efni" class="wrapper-main">
+          <div class="cards">
+            <div class="content">
+              <section class="card">
+                <div class="image">
+                  <img src="../myndir/Image-1.png" />
+                </div>
+                <div class="content">
+                  <p class="month">September</p>
+                  <h3>Pumpkin pie</h3>
+                  <a href="./recipe.html" class="readmore">Read more</a>
+                </div>
+              </section>
 
-      <section>
-        <img src="../myndir/Bitmap (2).png" />
-        <p>September</p>
-        <p>Banana cake</p>
-      </section>
+              <section class="card">
+                <div class="image">
+                  <img src="../myndir/image 1.jpg" />
+                </div>
+                <div class="content">
+                  <p class="month">September</p>
+                  <h3>Milk cookies</h3>
+                  <a href="./recipe.html" class="readmore">Read more</a>
+                </div>
+              </section>
 
-      <section>
-        <img src="../myndir/Image-4.png" />
-        <p>September</p>
-        <p>Lax salad</p>
-      </section>
+              <section class="card">
+                <div class="image">
+                  <img src="../myndir/Image-8.png" />
+                </div>
+                <div class="content">
+                  <p class="month">September</p>
+                  <h3>Almond cookies</h3>
+                  <a href="./recipe.html" class="readmore">Read more</a>
+                </div>
+              </section>
 
-      <section>
-        <img src="../myndir/Image-5.png" />
-        <p>September</p>
-        <p>Cube cake</p>
-      </section>
+              <section class="card">
+                <div class="image">
+                  <img src="../myndir/Bitmap (2).png" />
+                </div>
+                <div class="content">
+                  <p class="month">September</p>
+                  <h3>Banana cake</h3>
+                  <a href="./recipe.html" class="readmore">Read more</a>
+                </div>
+              </section>
 
-      <section>
-        <img src="../myndir/Image-1.png" />
-        <p>September</p>
-        <p>Pumpkin pie</p>
-      </section>
+              <section class="card">
+                <div class="image">
+                  <img src="../myndir/Image-4.png" />
+                </div>
+                <div class="content">
+                  <p class="month">September</p>
+                  <h3>Lax salad</h3>
+                  <a href="./recipe.html" class="readmore">Read more</a>
+                </div>
+              </section>
 
-      <section>
-        <img src="../myndir/image 1.jpg" />
-        <p>September</p>
-        <p>Milk cookies</p>
-      </section>
+              <section class="card">
+                <div class="image">
+                  <img src="../myndir/Image-5.png" />
+                </div>
+                <div class="content">
+                  <p class="month">September</p>
+                  <h3>Cube cake</h3>
+                  <a href="./recipe.html" class="readmore">Read more</a>
+                </div>
+              </section>
 
-      <section>
-        <img src="../myndir/Image-8.png" />
-        <p>September</p>
-        <p>Almond cookies</p>
-      </section>
+              <section class="card">
+                <div class="image">
+                  <img src="../myndir/Image-1.png" />
+                </div>
+                <div class="content">
+                  <p class="month">September</p>
+                  <h3>Pumpkin pie</h3>
+                  <a href="./recipe.html" class="readmore">Read more</a>
+                </div>
+              </section>
 
-      <section>
-        <img src="../myndir/Bitmap (2).png" />
-        <p>September</p>
-        <p>Banana cake</p>
-      </section>
+              <section class="card">
+                <div class="image">
+                  <img src="../myndir/image 1.jpg" />
+                </div>
+                <div class="content">
+                  <p class="month">September</p>
+                  <h3>Milk cookies</h3>
+                  <a href="./recipe.html" class="readmore">Read more</a>
+                </div>
+              </section>
 
-      <section>
-        <img src="../myndir/Image-4.png" />
-        <p>September</p>
-        <p>Lax salad</p>
-      </section>
+              <section class="card">
+                <div class="image">
+                  <img src="../myndir/Image-8.png" />
+                </div>
+                <div class="content">
+                  <p class="month">September</p>
+                  <h3>Almond cookies</h3>
+                  <a href="./recipe.html" class="readmore">Read more</a>
+                </div>
+              </section>
 
-      <section>
-        <img src="../myndir/Image-5.png" />
-        <p>September</p>
-        <p>Cube cake</p>
-      </section>
+              <section class="card">
+                <div class="image">
+                  <img src="../myndir/Bitmap (2).png" />
+                </div>
+                <div class="content">
+                  <p class="month">September</p>
+                  <h3>Banana cake</h3>
+                  <a href="./recipe.html" class="readmore">Read more</a>
+                </div>
+              </section>
 
-      <section>
-        <img src="../myndir/Image-1.png" />
-        <p>September</p>
-        <p>Pumpkin pie</p>
-      </section>
+              <section class="card">
+                <div class="image">
+                  <img src="../myndir/Image-4.png" />
+                </div>
+                <div class="content">
+                  <p class="month">September</p>
+                  <h3>Lax salad</h3>
+                  <a href="./recipe.html" class="readmore">Read more</a>
+                </div>
+              </section>
 
-      <section>
-        <img src="../myndir/image 1.jpg" />
-        <p>September</p>
-        <p>Milk cookies</p>
-      </section>
+              <section class="card">
+                <div class="image">
+                  <img src="../myndir/Image-5.png" />
+                </div>
+                <div class="content">
+                  <p class="month">September</p>
+                  <h3>Cube cake</h3>
+                  <a href="./recipe.html" class="readmore">Read more</a>
+                </div>
+              </section>
 
-      <section>
-        <img src="../myndir/Image-8.png" />
-        <p>September</p>
-        <p>Almond cookies</p>
-      </section>
+              <section class="card">
+                <div class="image">
+                  <img src="../myndir/Image-1.png" />
+                </div>
+                <div class="content">
+                  <p class="month">September</p>
+                  <h3>Pumpkin pie</h3>
+                  <a href="./recipe.html" class="readmore">Read more</a>
+                </div>
+              </section>
 
-      <section>
-        <img src="../myndir/Bitmap (2).png" />
-        <p>September</p>
-        <p>Banana cake</p>
-      </section>
+              <section class="card">
+                <div class="image">
+                  <img src="../myndir/image 1.jpg" />
+                </div>
+                <div class="content">
+                  <p class="month">September</p>
+                  <h3>Milk cookies</h3>
+                  <a href="./recipe.html" class="readmore">Read more</a>
+                </div>
+              </section>
 
-      <section>
-        <img src="../myndir/Image-4.png" />
-        <p>September</p>
-        <p>Lax salad</p>
-      </section>
+              <section class="card">
+                <div class="image">
+                  <img src="../myndir/Image-8.png" />
+                </div>
+                <div class="content">
+                  <p class="month">September</p>
+                  <h3>Almond cookies</h3>
+                  <a href="./recipe.html" class="readmore">Read more</a>
+                </div>
+              </section>
 
-      <section>
-        <img src="../myndir/Image-5.png" />
-        <p>September</p>
-        <p>Cube cake</p>
-      </section>
+              <section class="card">
+                <div class="image">
+                  <img src="../myndir/Bitmap (2).png" />
+                </div>
+                <div class="content">
+                  <p class="month">September</p>
+                  <h3>Banana cake</h3>
+                  <a href="./recipe.html" class="readmore">Read more</a>
+                </div>
+              </section>
 
-      <section>
-        <img src="../myndir/Image-1.png" />
-        <p>September</p>
-        <p>Pumpkin pie</p>
-      </section>
+              <section class="card">
+                <div class="image">
+                  <img src="../myndir/Image-4.png" />
+                </div>
+                <div class="content">
+                  <p class="month">September</p>
+                  <h3>Lax salad</h3>
+                  <a href="./recipe.html" class="readmore">Read more</a>
+                </div>
+              </section>
 
-      <section>
-        <img src="../myndir/image 1.jpg" />
-        <p>September</p>
-        <p>Milk cookies</p>
-      </section>
+              <section class="card">
+                <div class="image">
+                  <img src="../myndir/Image-5.png" />
+                </div>
+                <div class="content">
+                  <p class="month">September</p>
+                  <h3>Cube cake</h3>
+                  <a href="./recipe.html" class="readmore">Read more</a>
+                </div>
+              </section>
 
-      <section>
-        <img src="../myndir/Image-8.png" />
-        <p>September</p>
-        <p>Almond cookies</p>
-      </section>
+              <section class="card">
+                <div class="image">
+                  <img src="../myndir/Image-1.png" />
+                </div>
+                <div class="content">
+                  <p class="month">September</p>
+                  <h3>Pumpkin pie</h3>
+                  <a href="./recipe.html" class="readmore">Read more</a>
+                </div>
+              </section>
+
+              <section class="card">
+                <div class="image">
+                  <img src="../myndir/image 1.jpg" />
+                </div>
+                <div class="content">
+                  <p class="month">September</p>
+                  <h3>Milk cookies</h3>
+                  <a href="./recipe.html" class="readmore">Read more</a>
+                </div>
+              </section>
+
+              <section class="card">
+                <div class="image">
+                  <img src="../myndir/Image-8.png" />
+                </div>
+                <div class="content">
+                  <p class="month">September</p>
+                  <h3>Almond cookies</h3>
+                  <a href="./recipe.html" class="readmore">Read more</a>
+                </div>
+              </section>
+            </div>
+          </div>
+        </main>
+      </div>
+      
+      <form method="GET" action=".">
+          <section>
+            <p class="craving">Craving more?</p>
+            <h3 class="subscribe">Subscribe to our newsletter</h3>
+          </section>
+          <section>
+            <fieldset>
+              <div>
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="Enter your mail here        "
+                />
+              </div>
+              <h3>email@example.com</h3>
+              <h3>Enter your mail here</h3>
+            </fieldset>
+          </section>   
+          <div class="actions">
+            <button class="blackbox-button">Subscribe now</button>
+          </div>
+
+          <p>Subscribe now</p>
+      </form>
+      <footer>
+        <p>Come and join us for more recipes</p>
+        <div class="samf">
+          <a
+            href="https://www.facebook.com/HaskoliIslands/"
+            class="samfelagsmidlar"
+            ><img src="../myndir/Facebook-Icon.png"
+          /></a>
+
+          <a
+            href="https://x.com/i/flow/login?redirect_after_login=%2FHaskoli_Islands"
+            class="samfelagsmidlar"
+            ><img src="../myndir/Twitter-Icon.png"
+          /></a>
+
+          <a href="https://www.youtube.com/user/HIvarp" class="samfelagsmidlar"
+            ><img src="../myndir/YouTube-Icon.png"
+          /></a>
+        </div>
+        <p class="website">yamyam.com</p>
+      </footer>
+
     </div>
   </body>
 </html>
