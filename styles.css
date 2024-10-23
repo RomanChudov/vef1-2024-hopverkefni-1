@@ -1,31 +1,67 @@
+@charset "UTF-8";
+/* Setjum inn „reset“ sem fjarlægir margin og padding af öllu */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Reiknum stærð á öllum boxum sem border-box */
+html {
+  box-sizing: border-box;
+}
+
+/* og látum erfast á allt */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* hjálpar class sem felur sjónrænt en skjálesarar lesa */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Stillingar */
 :root {
-    --font-size-base: 16px;
-    --font-size-headings: 1.5rem;
-    /* Grunn bilið okkar er 1rem == 16px */
-    --spacing: 1rem;
-    /* Bil á milli „stærri“ eininga (header, efnisbox, footer) */
-    --vertical-space: calc(var(--gutter) * 1);
-    --vertical-space-large: calc(var(--gutter) * 1.5);
-    /* Hámarks og lágmarks breidd á efni */
-    --max-width: 9000px;
-    --min-width-image: 200px;
-    --max-width-image: 300px;
-    --max-width-footer-section: 250px;
-    /* Border breiddir */
-    --border-width: 1px;
-    --border-radius-regular: 5px;
-    --border-radius-image: 10px;
-    --border-regular: 1px solid #000; /* todo longhand */
-    --border-with-background: 4px solid #fafafa;
-    /* Grid stillingar */
-    --columns: 12;
-    --gutter: 30px;
-    --offset: 20px;
-    /* Breidd á efni með offset */
-    --width-offset: calc(100% - (2 * var(--offset)));
-    /* Litir */
-    /** Litir með nafni **/
-    --color-grey-fyrir-texta2: #9B9B9B;
+  --font-size-base: 16px;
+  --font-size-headings: 1.5rem;
+  /* Grunn bilið okkar er 1rem == 16px */
+  --spacing: 1rem;
+  /* Bil á milli „stærri“ eininga (header, efnisbox, footer) */
+  --vertical-space: calc(var(--gutter) * 1);
+  --vertical-space-large: calc(var(--gutter) * 1.5);
+  /* Hámarks og lágmarks breidd á efni */
+  --max-width: 1200px;
+  --min-width-image: 200px;
+  --max-width-image: 300px;
+  --max-width-footer-section: 250px;
+  /* Border breiddir */
+  --border-width: 1px;
+  --border-radius-regular: 5px;
+  --border-radius-image: 10px;
+  --border-regular: 1px solid #000; /* todo longhand */
+  --border-with-background: 4px solid #cc99bb;
+  /* Grid stillingar */
+  --columns: 12;
+  --gutter: 30px;
+  --offset: 80px;
+  /* Breidd á efni með offset */
+  --width-offset: calc(100% - (2 * var(--offset)));
+  /* Litir */
+  /** Litir með nafni **/
+  --color-yellow: #f3dd99;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-purple: #eebbdd;
+  --color-purple-dark: #cc99bb;
+      --color-grey-fyrir-texta2: #9B9B9B;
     --color-grey-fyrir-texta: #5E5B69;
     --color-brown: #E3CDB1;
     --color-white: #ffffff;
@@ -33,18 +69,395 @@
     --color-white2: #fafafa;
     --color-grey2: #D0D0D0;
     ;
-    /** Litir með notkun **/
-    --color-background-primary: var(--color-white);
+  /** Litir með notkun **/
+  --color-background-primary: var(--color-white);
+  --color-background-secondary: var(--color-black);
+  --color-background-form: var(--color-white);
+  --color-border-with-background: var(--color-purple-dark);
+      --color-background-primary: var(--color-white);
     --color-background-secondary: var(--color-white2);
     --color-background-form: var(--color-black);
     --color-border-with-background: var(--color-grey2);
-    /* Letur stillingar */
-    --font-base-size: 1rem;
-    --font-family-base: "Open Sans", Arial, Helvetica, sans-serif;
-    --font-family-heading: "Matemasie-Regular", "Comic Sans MS", cursive;
-    /* Transitions */
-    --transition-time-short: 3000ms;
-    --transition-time-long: 600ms;
-    --transition-timing-function: ease-in-out;
+  /* Letur stillingar */
+  --font-base-size: 1rem;
+  --font-family-base: "Poppins", Arial, Helvetica, sans-serif;
+  --font-family-heading: "Playfair", "Comic Sans MS", cursive;
+  /* Transitions */
+  --transition-time-short: 300ms;
+  --transition-time-long: 600ms;
+  --transition-timing-function: ease-in-out;
+}
+
+/* Almennt */
+/** Letur og stærðir **/
+/*** Grunnstærð er 16px ***/
+html {
+  font-size: var(--font-size-base);
+}
+
+/*** Leturgerðir sem við sækjum úr fonts/ möppu ***/
+@font-face {
+  font-family: "Playfair";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./fonts/PlayfairDisplay-VariableFont_wght.ttf") format("woff2");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./fonts/Poppins-Regular.ttf") format("woff2");
+}
+
+/*** Allt meginmál notar Poppins ***/
+html,
+input,
+select,
+button {
+  font-family: var(--font-family-base);
+}
+
+/*** Allar fyrirsagnir nota Playfair ***/
+h1,
+h2,
+h3,
+legend {
+  font-family: var(--font-family-heading);
+}
+
+/** Litur á hlekkjum erfist frá foreldri **/
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.month {
+  color: #9b9b9b;
+  size: 14px;
+}
+
+.readmore {
+  color: #e3cdb1;
+  size: 16px;
+}
+
+.website {
+  color: #d0d0d0;
+}
+
+.craving {
+  color: #e3cdb1;
+}
+
+.whitetext {
+  color: var(--color-white);
+}
+
+/* Wrapper */
+
+.wrapper {
+  /* Notum grid hér til að setja upp bil á milli header, meginmáls og fóts */
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+  /* grid items eru miðjuð */
+  justify-items: center;
+  gap: var(--vertical-space);
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-background-primary);
+}
+
+.wrapper .wrapper-content {
+  width: var(--width-offset);
+  max-width: var(--max-width);
+}
+
+.wrapper .wrapper-nav {
+  margin-bottom: var(--spacing);
+}
+
+/** Valmynd **/
+nav {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.topLine {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/** Meginmál og efni forsíðu **/
+main {
+  width: 100%;
+}
+
+/**
+ * notum þetta til að fá bil á milli eininga _almennt_
+ * en ekki að hver eining þurfi að huga að bili
+ */
+main > .content {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2);
+}
+
+/** Cards **/
+.cards {
+  display: grid;
+  grid-template-rows: auto;
+  gap: var(--vertical-space);
+  justify-items: center;
+  width: 100%;
+}
+
+.cards > .content {
+  display: grid;
+  grid-template-rows: auto;
+  gap: var(--vertical-space);
+  justify-items: center;
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .cards > .content {
+    grid-template-columns: repeat(calc(var(--columns)), 1fr);
+    grid-template-rows: auto;
   }
-  
+}
+/** Card **/
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .card {
+    grid-column: span 6;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card {
+    grid-column: span 4;
+  }
+}
+
+.card > .image {
+  width: 100%;
+}
+
+.card > .image img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.card > .content {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--spacing);
+}
+.card > .content h3 .readmore {
+  width: 50%;
+}
+.card > .content .month {
+  width: 100%;
+}
+
+.button {
+  display: inline-block;
+  padding: calc(var(--spacing) * 0.5) calc(var(--spacing) * 0.5);
+  border: var(--border-regular);
+  border-width: var(--border-width);
+  color: var(--color-black);
+  background-color: var(--color-background-primary);
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color var(--transition-time-short)
+      var(--transition-timing-function),
+    color var(--transition-time-short) var(--transition-timing-function),
+    border-color var(--transition-time-short) var(--transition-timing-function);
+}
+
+.button:active {
+  color: var(--color-background-secondary);
+  background-color: var(--color-black);
+  border-color: var(--color-background-secondary);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+footer > p {
+  display: flex;
+  justify-content: center;
+}
+.samf {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+
+/** Cards **/
+
+.cardsFlex {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+}
+
+.cardsFlex > .title {
+  width: 100%;
+  text-align: center;
+}
+
+.cardsFlex > .content {
+  display: flex;
+  justify-content: center;
+  gap: calc(var(--spacing) * 2);
+  flex-wrap: wrap;
+
+  width: 100%;
+}
+
+/** Card **/
+
+.cardFlex {
+  display: flex;
+  flex-direction: column;
+
+  /* hér verðum við að reikna út breidd svo að flex-wrap virki */
+  width: calc(50% - var(--spacing));
+}
+
+.cardFlex > .image {
+  width: 100%;
+}
+
+.cardFlex > .image img {
+  display: block;
+
+  border-top-left-radius: var(--border-radius-regular);
+  border-top-right-radius: var(--border-radius-regular);
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.cardFlex > .content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+
+  padding: calc(var(--spacing) / 2);
+  border: var(--border-regular);
+  border-top: 0;
+  border-bottom-left-radius: var(--border-radius-regular);
+  border-bottom-right-radius: var(--border-radius-regular);
+}
+
+
+
+
+
+
+
+
+
+
+
+form {
+  background-color: var(--color-background-secondary);
+  padding: 1rem 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.blackbox-button {
+  display: inline-block;
+  padding: calc(var(--spacing) * 0.5) calc(var(--spacing) * 2);
+  border: var(--border-regular);
+  border-width: var(--border-width);
+  border-color:#e3cdb1 ;
+  color: #e3cdb1;
+  background-color: var(--color-background-secondary);
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color var(--transition-time-short)
+      var(--transition-timing-function),
+    color var(--transition-time-short) var(--transition-timing-function),
+    border-color var(--transition-time-short) var(--transition-timing-function);
+}
+
+.blackbox > section > .subscribe {
+  color: var(--color-white);
+  font-size: 40px;
+  display: inline-block;
+}
+
+::placeholder {
+  color:#525252;
+  ;
+  opacity: 1; 
+}
+
+fieldset input,
+fieldset select,
+fieldset textarea {
+  padding: calc(var(--spacing) * 0.5);
+  width: 100%;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-style: none;
+  text-decoration: underline;
+}
+
+
+/** Skráningarform **/
+fieldset {
+  border: 0;
+}
+
+fieldset label {
+  color: var(--color-white);
+}
+
+
+
+
+fieldset input[type="checkbox"] {
+  display: inline-block;
+  margin-right: calc(var(--spacing) * 0.5);
+  width: auto;
+}
