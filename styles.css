@@ -324,12 +324,21 @@ footer > p {
 
 
 
-/** Cards **/
+
+/** Svarta kassi **/
+
+.subscribe{
+  color: var(--color-white);
+}
 
 .cardsFlex {
   display: flex;
   flex-direction: column;
   gap: var(--spacing);
+  
+
+
+
 }
 
 .cardsFlex > .title {
@@ -344,6 +353,7 @@ footer > p {
   flex-wrap: wrap;
 
   width: 100%;
+  
 }
 
 /** Card **/
@@ -352,9 +362,23 @@ footer > p {
   display: flex;
   flex-direction: column;
 
+
   /* hér verðum við að reikna út breidd svo að flex-wrap virki */
-  width: calc(50% - var(--spacing));
+  width: calc(100% - var(--spacing));
 }
+
+@media (min-width: 700px) {
+  .cardFlex {
+    width: calc(50% - var(--spacing));
+  }
+}
+
+@media (min-width: 1200px) {
+  .cardFlex {
+    width: calc(32% - var(--spacing));
+  }
+}
+
 
 .cardFlex > .image {
   width: 100%;
@@ -396,12 +420,11 @@ footer > p {
 
 
 form {
-  background-color: var(--color-background-secondary);
-  padding: 1rem 100%;
+  width: 100%;
+  background-color: var(--color-black);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
 }
 
 .blackbox-button {
