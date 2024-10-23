@@ -7,5 +7,10 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   padding: 10px;             
   border: 1px solid #ddd;   
-  position: absolute;         
+  position: absolute;
+  display: grid;
+  grid-template-rows: auto;
+  gap: var(--vertical-space);
+  justify-items: center;
+  width: 100%;         
 }

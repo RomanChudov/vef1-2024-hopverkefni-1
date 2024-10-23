@@ -7,6 +7,11 @@
     font-family:inherit "Poppins-Regular.ttf";
     padding: 10px;             
     border: 1px solid #ddd;   
-    position: sticky;         
+    position: sticky;      
+    display: grid;
+    grid-template-rows: auto;
+    gap: var(--vertical-space);
+    justify-items: center;
+    width: 100%;   
   }
   
