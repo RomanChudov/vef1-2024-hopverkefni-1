@@ -16,12 +16,13 @@
     width: 100%;
   }
   
-  @media (min-width: 700px) {
+  @media (width >= 700px) {
     .cards > .content {
       grid-template-columns: repeat(calc(var(--columns)), 1fr);
       grid-template-rows: auto;
     }
   }
+
   /** Card **/
   .card {
     display: flex;
@@ -29,13 +30,13 @@
     width: 100%;
   }
   
-  @media (min-width: 700px) {
+  @media (width >= 700px) {
     .card {
       grid-column: span 6;
     }
   }
   
-  @media (min-width: 1200px) {
+  @media (width >= 1200px) {
     .card {
       grid-column: span 4;
     }
@@ -56,14 +57,15 @@
   .card > .content {
     flex: 1;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     gap: var(--spacing);
   }
+
   .card > .content h3 .readmore {
     width: 50%;
   }
+
   .card > .content .month {
     width: 100%;
   }

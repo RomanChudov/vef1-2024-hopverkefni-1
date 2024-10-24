@@ -1,27 +1,27 @@
 
 /* Wrapper */
 
-.wrapperRoman {
+.wrapper-roman {
   /* Notum grid hér til að setja upp bil á milli header, meginmáls og fóts */
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 100%;
+
   /* grid items eru miðjuð */
   justify-items: center;
   gap: var(--vertical-space);
   width: 100%;
   min-height: 100vh;
   background-color: var(--color-background-primary);
-
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
- .wrapper-contentRoman {
+ .wrapper-content-roman {
   width: var(--width-offset);
   max-width: var(--max-width);
 }
 
- .wrapper-navRoman {
+ .wrapper-nav-roman {
   margin-bottom: var(--spacing);
 }

@@ -21,7 +21,7 @@
     --border-radius-regular: 0px;
     --border-radius-image: 10px;
     --border-regular: 1px solid #000; /* todo longhand */
-    --border-with-background: 4px solid #cc99bb;
+    --border-with-background: 4px solid #c9b;
   
     /* Grid stillingar */
     --columns: 12;
@@ -31,39 +31,30 @@
     /* Breidd á efni með offset */
     --width-offset: calc(100% - (2 * var(--offset)));
   
-    /* Litir */
-    background: var(--color-white);
-  
+ 
     /** Litir með nafni **/
     --color-yellow: #f3dd99;
-    --color-white: #ffffff;
-    --color-black: #000000;
-    --color-purple: #eebbdd;
-    --color-purple-dark: #cc99bb;
+    --color-white: #fff;
+    --color-purple: #ebd;
+    --color-purple-dark: #c9b;
     --color-grey: #5e5b69;
     --color-light: #e3cdb1;
     --color-grey-fyrir-texta2: #9b9b9b;
     --color-grey-fyrir-texta: #5e5b69;
     --color-brown: #e3cdb1;
-    --color-white: #ffffff;
-    --color-black: #000000;
+    --color-black: #000;
     --color-white2: #fafafa;
     --color-grey2: #d0d0d0;
   
     /** Litir með notkun **/
-    --color-background-primary: var(--color-white);
-    --color-background-secondary: var(--color-white);
-    --color-background-form: var(--color-white);
     --color-border-with-background: var(--color-white);
     --color-background-primary: var(--color-white);
     --color-background-secondary: var(--color-white2);
-    --color-background-form: var(--color-black);
-    --color-border-with-background: var(--color-grey2);
   
     /* Letur stillingar */
     --font-base-size: 1rem;
-    --font-family-base: "Poppins", "Open Sans", Arial,
-      Helvetica, sans-serif;
+    --font-family-base: "Poppins", "Open Sans", arial,
+      helvetica, sans-serif;
     --font-family-heading: "Playfair Display",
       "Comic Sans MS", cursive;
   

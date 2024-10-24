@@ -26,7 +26,7 @@ html {
   }
   
   @font-face {
-    font-family: "Poppins";
+    font-family: Poppins;
     font-weight: 500;
     src: url("./fonts/Poppins/Poppins-Regular.ttf") format("woff2");
   }
@@ -38,6 +38,7 @@ html {
     font-family: var(--font-family-base);
     color: #5e5b69;
   }
+
   button {
     color: #e3cdb1;
   }
@@ -48,7 +49,7 @@ html {
   h3,
   legend {
     font-family: var(--font-family-heading);
-    color: #000000;
+    color: #000;
   }
   
   /** Lætur myndir aldrei taka meira pláss en foreldri skilgreinir **/

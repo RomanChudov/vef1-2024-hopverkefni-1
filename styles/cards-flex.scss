@@ -1,17 +1,17 @@
-// Card flex
+/** Card flex **/
 
-.cardsFlex {
+.cards-flex {
     display: flex;
     flex-direction: column;
     gap: var(--spacing);
   }
   
-  .cardsFlex > .title {
+  .cards-flex > .title {
     width: 100%;
     text-align: center;
   }
   
-  .cardsFlex > .content {
+  .cards-flex > .content {
     display: flex;
     justify-content: center;
     gap: calc(var(--spacing) * 2);
@@ -22,45 +22,43 @@
   
   /** Card **/
   
-  .cardFlex {
+  .card-flex {
     display: flex;
     flex-direction: column;
+
     /* hér verðum við að reikna út breidd svo að flex-wrap virki */
     width: calc(100% - var(--spacing));
   }
   
-  @media (min-width: 700px) {
-    .cardFlex {
+  @media (width >= 700px) {
+    .card-flex {
       width: calc(50% - var(--spacing));
     }
   }
   
-  @media (min-width: 1200px) {
-    .cardFlex {
+  @media (width >= 1200px) {
+    .card-flex {
       width: calc(32% - var(--spacing));
     }
   }
   
-  .cardFlex > .image {
+  .card-flex > .image {
     width: 100%;
   }
   
-  .cardFlex > .image img {
+  .card-flex > .image img {
     display: block;
-  
     width: 100%;
     height: 300px;
     object-fit: cover;
     object-position: 50% 50%;
   }
   
-  .cardFlex > .content {
+  .card-flex > .content {
     flex: 1;
-  
     display: flex;
     flex-direction: column;
     gap: var(--spacing);
-  
     padding: calc(var(--spacing) / 2);
   }
   
