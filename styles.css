@@ -426,6 +426,15 @@ main > .content {
   grid-column: span 5;
 }
 
+.middle {
+  display: flex;
+  flex-direction: row;
+}
+
+.book-picture {
+  max-width: 50%;
+}
+
 .t2 {
   display: flex;
   flex-direction: row;
