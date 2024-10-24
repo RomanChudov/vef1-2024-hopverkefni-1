@@ -2,7 +2,7 @@
 <html lang="is">
   <head>
     <meta charset="utf-8" />
-    <title>yum&yum</title>
+    <title>yamyam</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./grid.css" />
@@ -25,13 +25,13 @@
       </header>
       <div class="hero">
         <div class="wrapper-content">
-          <div class="description">
+          <div class="descriptionn">
             <div class="text">
               <p>Get ready to get busy</p>
             </div>
-            <div class="t2">
-              <h1 class="title">Pumpkin pie</h1>
-            </div>
+
+            <h1 class="title">Pumpkin pie</h1>
+
             <div>
               <p>
                 Pumpkin pie is a sweet dessert pie with a spiced, pumpkin-based
@@ -69,9 +69,7 @@
                       <h3 class="title">Lax sushi roll</h3>
                     </div>
                     <div class="actions">
-                      <a href="./sidur/latest_recipe.html" class="button"
-                        >Read more</a
-                      >
+                      <a href="./sidur/recipe.html" class="button">Read more</a>
                     </div>
                   </div>
                 </section>
@@ -88,9 +86,7 @@
                       <h3 class="title">Milk cookies</h3>
                     </div>
                     <div class="actions">
-                      <a href="./sidur/latest_recipe.html" class="button"
-                        >Read more</a
-                      >
+                      <a href="./sidur/recipe.html" class="button">Read more</a>
                     </div>
                   </div>
                 </section>
@@ -219,9 +215,7 @@
                       <h3 class="title">Legumes printaniers</h3>
                     </div>
                     <div class="actions">
-                      <a href="./sidur/latest_recipe.html" class="button"
-                        >Read more</a
-                      >
+                      <a href="./sidur/video_recipe.html" class="button">See</a>
                     </div>
                   </div>
                 </section>
@@ -241,9 +235,7 @@
                       <h3 class="title">Blossoming cookie</h3>
                     </div>
                     <div class="actions">
-                      <a href="./sidur/latest_recipe.html" class="button"
-                        >Read more</a
-                      >
+                      <a href="./sidur/video_recipe.html" class="button">See</a>
                     </div>
                   </div>
                 </section>
@@ -260,7 +252,7 @@
                       <h3 class="title">Blueberry pie</h3>
                     </div>
                     <div class="actions">
-                      <a href="./sidur/recipe.html" class="button">Read more</a>
+                      <a href="./sidur/video_recipe.html" class="button">See</a>
                     </div>
                   </div>
                 </section>
@@ -275,22 +267,56 @@
           </div>
         </main>
       </div>
+      <form method="GET" action=".">
+        <div class="cardsFlex">
+          <div class="content">
+            <fieldset class="cardFlex">
+              <div class="content">
+                <p class="craving">Craving more?</p>
+                <h2 class="subscribe">Subscribe to our newsletter</h2>
+              </div>
+            </fieldset>
+            <fieldset class="cardFlex">
+              <div class="content">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="Enter your mail here        "
+                />
+              </div>
+            </fieldset>
+            <fieldset class="cardFlex">
+              <div class="content">
+                <button class="blackbox-button">Subscribe now</button>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </form>
 
       <footer>
-        <div class="content">
-          <section>
-            <h2>Come an join us for more recipes</h2>
-            <ul>
-              <li>
-                <a href="https://www.facebook.com/HaskoliIslands/">Facebook</a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/haskoli_islands/">Twitter</a>
-              </li>
-              <li><a href="https://www.youtube.com/user/HIvarp">YouTube</a></li>
-            </ul>
-          </section>
+        <p>Come and join us for more recipes</p>
+        <div class="samf">
+          <a
+            href="https://www.facebook.com/HaskoliIslands/"
+            class="samfelagsmidlar"
+            ><img src="../myndir/Facebook-Icon.png"
+          /></a>
+
+          <a
+            href="https://x.com/i/flow/login?redirect_after_login=%2FHaskoli_Islands"
+            class="samfelagsmidlar"
+            ><img src="../myndir/Twitter-Icon.png"
+          /></a>
+
+          <a href="https://www.youtube.com/user/HIvarp" class="samfelagsmidlar"
+            ><img src="../myndir/YouTube-Icon.png"
+          /></a>
         </div>
+        <p class="website">yamyam.com</p>
       </footer>
     </div>
   </body>
