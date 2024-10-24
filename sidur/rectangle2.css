@@ -1,0 +1,17 @@
+#rectangle2 {
+    width: 111.81px;           
+    height: 111.55px;           
+    top: 111.87px;            
+    left: 111.65px;            
+    background: #FAFAFA;
+    font-family:inherit "Poppins-Regular.ttf";
+    padding: 10px;             
+    border: 1px solid #ddd;   
+    position: sticky;      
+    display: grid;
+    grid-template-rows: auto;
+    gap: var(--vertical-space);
+    justify-items: center;
+    width: 100%;   
+  }
+  
