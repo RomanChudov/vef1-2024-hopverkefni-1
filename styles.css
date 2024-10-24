@@ -69,7 +69,10 @@ html {
   --color-black: #000000;
   --color-purple: #eebbdd;
   --color-purple-dark: #cc99bb;
+  --color-lgrey: #d0d0d0;
   --color-grey: #5e5b69;
+  --color-nav-grey: #262626;
+
   --color-light: #e3cdb1;
 
   /** Litir með notkun **/
@@ -279,9 +282,22 @@ header,
 /* Það sem fylgir er tillaga að uppbyggingu á selectorum fyrir verkefnið */
 
 /** Haus á síðum **/
+.wrapper-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 3rem;
+  font-family: "Poppins";
+  font-weight: 400;
+  color: var(--color-nav-grey);
+}
+.dummy {
+  width: 58%;
+}
 
 header {
-  padding: var(--spacing) calc(var(--spacing) * 1.5);
+  display: grid;
+  /*  padding: var(--spacing) calc(var(--spacing) * 1.5); */
   width: 100%;
 
   background-color: var(--color-background-secondary);
@@ -493,6 +509,10 @@ main > .content {
 }
 .t2 > h2 {
   padding-right: 0.5rem;
+}
+
+.t2 > .check {
+  color: #d0d0d0;
 }
 
 /**
