@@ -1,29 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../grid.css">
-    <link rel="stylesheet" href="rectangle.css">
-    <title>Video Recipe</title>
+    <link rel="stylesheet" href="cards.css">
+
 </head>
 <body>
-    <h1>Video Recipe</h1>
-    <ul>
-        <li>Text</li>
+     <form method="GET" action=".">
+        <div class="cardsFlex">
+          <div class="content">
+            <fieldset class="cardFlex">
+    <div id="cards" style="color:aliceblue;>
+        <h1>Video Recipe</h1>
+        <button onclick="alert('Video')" style="color: white
+        gi; background:none;">
+            <img src="/myndir/Image-Video.png" alt="Video af uppskrift" style="width:150px; height:auto;" />
+        </button>
         <ul>
-            <li>August 2016</li>
-            <li>See</li>
-            <li>Questches Pie</li>
+            <li>Text
+                <ul>
+                    <li>August 2016</li>
+                    <li>See</li>
+                    <li>Questches Pie</li>
+                </ul>
+            </li>
+            <li>Text</li>
         </ul>
-        <li>Text</li>
-    </ul>
 
-    <button  onclick="alert('Video')" style="border:none; background:none;">
-<Question ID="1" Shortcut="chapter 1" Order="" ElementType="chapter" >
-<LongCaption><img src="/myndir/Image-Video.png" alt="Video af uppskrift" style="width:150px; height:auto;"></LongCaption>
-</Question>
-    </button>
-</body>
-</html>
+        <h1>Pumpkin pie...</h1>
+        <div id="navigation">
+            <a href="latest_recipe.html">Recipes</a> |
+            <a href="video_recipe.html">Videos</a> |
+            <a href="about-us.html">About Us</a>
+        </div>
+
+        <div id="Servings">
+            <img src="/myndir/Servings-Icon-1.svg" alt="mynd af hníf og diski með litlu hjarta" width="16" height="16" />
+            <span>6 people</span>
+        </div>
+
+        <div id="Preparation">
+            <img src="/myndir/Preparation-Icon-1.svg" alt="mynd af hníf" width="16" height="16" />
+            <span>1 hour</span>
+        </div>
+
+        <div id="Difficulty">
+            <img src="/myndir/Level-Icon-1.svg" alt="mynd af ofnhanska" width="16" height="16" />
+            <span>easy recipe</span>
+        </div>
+
+        <h2>The Method</h2>
+        <p>
+            Wash and dry a few small lettuce leaves, tearing up the larger ones. Slice the tomatoes. Peel and finely slice the red onion. Slice the gherkins lengthways as finely as you can. Place all this on a platter and put in the middle of the table with plates, cutlery, ketchup, and drinks.
+            Remove your burgers to another plate and carefully wipe your pan or griddle clean with kitchen paper.
+            Halve your burger buns and lightly toast them on the griddle or in the pan. Also great with a chopped salad.
+        </p>
+
+        <h2>Ingredients</h2>
+        <h3>For the dough</h3>
+        <ul>
+            <li>1 tbs of water</li>
+            <li>2 cups of flour</li>
+            <li>2 eggs</li>
+            <li>1 cup of sugar</li>
+        </ul>
+
+        <h3>For the filling</h3>
+        <ul>
+            <li>1 tbs of water</li>
+            <li>2 cups of flour</li>
+            <li>2 eggs</li>
+            <li>1 cup of sugar</li>
+        </ul>
+    </div>
+
+
+    <form method="GET" action=".">
+        <div class="cardsFlex">
+          <div class="content">
+            <fieldset class="cardFlex">
+              <div class="content">
+                <p class="craving">Craving more?</p>
+                <h3 class="subscribe">Subscribe to our newsletter</h3>
+              </div>
+            </fieldset>
+            <fieldset class="cardFlex">
+              <div class="content">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="Enter your mail here        "
+                />
+              </div>
+            </fieldset>
+            <fieldset class="cardFlex">
+              <div class="content">
+                <button class="blackbox-button">Subscribe now</button>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </form>
+      
+      <footer>
+        <p>Come and join us for more recipes</p>
+        <div class="samf">
+          <a
+            href="https://www.facebook.com/HaskoliIslands/"
+            class="samfelagsmidlar"
+            ><img src="../myndir/Facebook-Icon.png"
+          /></a>
+      
+          <a
+            href="https://x.com/i/flow/login?redirect_after_login=%2FHaskoli_Islands"
+            class="samfelagsmidlar"
+            ><img src="../myndir/Twitter-Icon.png"
+          /></a>
+      
+          <a href="https://www.youtube.com/user/HIvarp" class="samfelagsmidlar"
+            ><img src="../myndir/YouTube-Icon.png"
+          /></a>
+        </div>
+        <p class="website">yamyam.com</p>
+      </footer>
+      </div>
+      </body>
+      </html>
+      
