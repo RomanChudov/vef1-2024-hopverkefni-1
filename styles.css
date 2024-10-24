@@ -201,20 +201,20 @@ a {
   border-color: #e3cdb1; */
 
   color: var(--color-light);
-  background-color: var(--color-background-secondary);
+  background-color: var(--color-white);
   font-size: 1rem;
   text-decoration: none;
 
   transition: background-color var(--transition-time-short)
       var(--transition-timing-function),
-    color var(--transition-time-short) var(--transition-timing-function),
-    border-color var(--transition-time-short) var(--transition-timing-function);
+    color var(--transition-time-short) var(--transition-timing-function);
+  /* border-color var(--transition-time-short) var(--transition-timing-function); */
 }
 
 .button:hover {
   color: var(--color-background-primary);
   background-color: var(--color-light);
-  border-color: var(--color-light);
+  /* border-color: var(--color-light); */
   background-image: linear-gradient(
     to right,
     --color-light 50%,
@@ -387,21 +387,20 @@ main > .content {
   justify-items: center;
 }
 
-.hate {
+/* .hate {
   display: grid;
   grid-template-rows: auto;
-  /* grid-template-columns: 100%; */
+  grid-template-columns: 100%;
   grid-template-columns: 1fr;
   align-items: center;
   justify-items: center;
   grid-template-columns: repeat(var(--columns), 1fr);
   gap: var(--gutter);
   position: relative;
-
-  /* gap: var(--vertical-space); */
+  gap: var(--vertical-space);
   width: var(--width-offset);
   max-width: var(--max-width);
-}
+  } */
 
 /* .hero-text {
   grid-column: span 12;
@@ -430,7 +429,7 @@ main > .content {
 }
 
 /** bók **/
-.book {
+.mag {
   display: grid;
   background-color: #f7f1eb;
   /* background: url("./myndir/Background-Header-Image-1.png"); */
@@ -442,6 +441,16 @@ main > .content {
   position: relative;
   width: 100%;
   justify-items: center;
+  padding-bottom: 10rem;
+}
+
+.wrapper-content > .mag-text {
+  grid-column: 2 / span 5;
+}
+
+.wrapper-content > .mag-img {
+  display: grid;
+  grid-column: 8 / span 4;
 }
 
 /** Cards **/
@@ -527,8 +536,8 @@ main > .content {
   display: flex;
   flex-direction: column;
 }
-.descriptionn {
-  column-span: 5;
+.hero-text {
+  grid-column: span 5;
 }
 
 .t2 {
@@ -924,21 +933,6 @@ main > .content {
 }
 .card > .content .month {
   width: 100%;
-}
-
-.button {
-  display: inline-block;
-  padding: calc(var(--spacing) * 0.5) calc(var(--spacing) * 0.5);
-  border: var(--border-regular);
-  border-width: var(--border-width);
-  color: var(--color-black);
-  background-color: var(--color-background-primary);
-  font-size: 1rem;
-  text-decoration: none;
-  transition: background-color var(--transition-time-short)
-      var(--transition-timing-function),
-    color var(--transition-time-short) var(--transition-timing-function),
-    border-color var(--transition-time-short) var(--transition-timing-function);
 }
 
 .button:active {
