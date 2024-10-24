@@ -298,11 +298,11 @@ header {
 }
 
 /** Valmynd **/
-nav {
+/* nav {
   position: sticky;
   top: 0;
   width: 100%;
-}
+} */
 
 nav ul {
   display: flex;
@@ -543,6 +543,9 @@ footer h2 {
 
 /** Valmynd **/
 nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   width: 100%;
